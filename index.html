@@ -162,7 +162,8 @@
                         { id: 'ex-bsmp', title: 'Barbell Standing Military Press', img1: 'https://i.imgur.com/GpPWMZa.png', img2: 'https://i.imgur.com/uq8fAfc.png', desc: 'Keep core braced. Move your head around the bar, not the bar around your head.' },
                         { id: 'ex-smsp', title: 'Smith Machine Seated Shoulder Press', img1: 'https://i.imgur.com/qeP14ky.png', img2: 'https://i.imgur.com/kLg7Wxe.png', desc: 'Set the bench upright. The bar path is fixed, allowing for maximum focus on the front delts.' },
                         { id: 'ex-dur', title: 'Dumbbell Upright Row', img1: 'https://i.imgur.com/6lXVjdi.jpeg', img2: 'https://i.imgur.com/ET7cYz7.jpeg', desc: 'Lead with your elbows, pulling them high and out. Keep the dumbbells close to your body.' },
-                        { id: 'ex-ezur', title: 'EZ Bar/Barbell Upright Row', img1: 'https://i.imgur.com/8267Dj4.png', img2: 'https://i.imgur.com/yjG79LM.png', desc: 'Use a closer grip to emphasize the front delts. Pull the bar up to your chin, keeping elbows high.' }
+                        { id: 'ex-ezur', title: 'EZ Bar/Barbell Upright Row', img1: 'https://i.imgur.com/8267Dj4.png', img2: 'https://i.imgur.com/yjG79LM.png', desc: 'Use a closer grip to emphasize the front delts. Pull the bar up to your chin, keeping elbows high.' },
+                        { id: 'ex-msp', title: 'Machine Shoulder Press', img1: 'https://i.imgur.com/v5P82TK.png', img2: 'https://i.imgur.com/fLepy6z.png', desc: 'Adjust the seat so the handles are at shoulder height. Press up without locking out your elbows to maintain tension.' }
                     ]
                 },
                 'side-delts': {
@@ -182,7 +183,7 @@
                     exercises: [
                         { id: 'ex-scrd', title: 'Single-Arm Cable Rear Delt Fly', img1: 'https://i.imgur.com/zK3OCRt.jpeg', img2: 'https://i.imgur.com/j9VSVrv.jpeg', desc: 'Pull diagonally down towards your opposite hip.' },
                         { id: 'ex-rdpd', title: 'Rear Delt Pec Deck', img1: 'https://i.imgur.com/qDrcc2h.png', img2: 'https://i.imgur.com/fbGYcJ3.png', desc: 'Think \'open your wings\'. Squeeze at the peak of the contraction, keeping your chest on the pad.' },
-                        { id: 'ex-borddf', title: 'Bent Over Rear Delt DB Fly', img1: 'https://i.imgur.com/UOFDZwU.png', img2: 'https://i.imgur.com/KOoJcak.png', desc: 'Maintain a flat back. Drive elbows out wide, not back, to isolate the rear delts.' },
+                        { id: 'ex-borddf', title: 'Bent Over Rear Delt DB Fly', img1: 'https://i.imgur.com/UOFDZwU.png', img2: 'https://i.imgur.com/KOoJcak.png', desc: 'Maintain a flat back. Drive elbows out wide, not back, to isolate the rear delts. This can also be done seated on a bench for more stability.' },
                         { id: 'ex-cfpr', title: 'Cable Face Pull (Rope)', img1: 'https://i.imgur.com/PkNSbb2.png', img2: 'https://i.imgur.com/x6v3aAs.png', desc: 'Pull the rope towards your face, not your chest. Keep elbows high to target the rear delts and upper back.' },
                         { id: 'ex-scrf', title: 'Standing Cable Reverse Fly', img1: 'https://i.imgur.com/OYoSbED.jpeg', img2: 'https://i.imgur.com/UdzS35Q.jpeg', desc: 'Squeeze your shoulder blades together at the peak of the movement.' }
                     ]
@@ -196,7 +197,7 @@
             },
             workoutStructure: {
                 workoutA: [
-                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-bsmp' }, target: '7-12 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-bsmp', tertiary: 'ex-msp' }, target: '7-12 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-clr', alternate: 'ex-lidlr' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-dlrp' }, target: 'Aim for 30 Reps', intensity: 'Total Failure', rest: 'Up to 5 mins Rest', sets: 2 },
                     { exercise: { primary: 'ex-scrd', alternate: 'ex-rdpd', tertiary: 'ex-borddf' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '90s Rest', sets: 1 }
