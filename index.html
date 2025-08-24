@@ -161,8 +161,6 @@
                         { id: 'ex-sdsp', title: 'Seated Dumbbell Shoulder Press', img1: 'https://i.imgur.com/vZFMqwM.png', img2: 'https://i.imgur.com/ZqWeO0S.png', desc: 'Keep forearms vertical. Don\'t let elbows flare too wide.' },
                         { id: 'ex-bsmp', title: 'Barbell Standing Military Press', img1: 'https://i.imgur.com/GpPWMZa.png', img2: 'https://i.imgur.com/uq8fAfc.png', desc: 'Keep core braced. Move your head around the bar, not the bar around your head.' },
                         { id: 'ex-smsp', title: 'Smith Machine Seated Shoulder Press', img1: 'https://i.imgur.com/qeP14ky.png', img2: 'https://i.imgur.com/kLg7Wxe.png', desc: 'Set the bench upright. The bar path is fixed, allowing for maximum focus on the front delts.' },
-                        { id: 'ex-dur', title: 'Dumbbell Upright Row', img1: 'https://i.imgur.com/6lXVjdi.jpeg', img2: 'https://i.imgur.com/ET7cYz7.jpeg', desc: 'Lead with your elbows, pulling them high and out. Keep the dumbbells close to your body.' },
-                        { id: 'ex-ezur', title: 'EZ Bar/Barbell Upright Row', img1: 'https://i.imgur.com/8267Dj4.png', img2: 'https://i.imgur.com/yjG79LM.png', desc: 'Use a closer grip to emphasize the front delts. Pull the bar up to your chin, keeping elbows high.' },
                         { id: 'ex-msp', title: 'Machine Shoulder Press', img1: 'https://i.imgur.com/v5P82TK.png', img2: 'https://i.imgur.com/fLepy6z.png', desc: 'Adjust the seat so the handles are at shoulder height. Press up without locking out your elbows to maintain tension.' }
                     ]
                 },
@@ -173,9 +171,8 @@
                         { id: 'ex-lidlr', title: 'Lean-In Dumbbell Lateral Raise', img1: 'https://i.imgur.com/Bmgrfdt.png', img2: 'https://i.imgur.com/ShF8gM0.png', desc: 'Use your body as an anchor. Isolate the side delt by preventing all torso movement.' },
                         { id: 'ex-dlrp', title: 'Dumbbell Lateral Raise Partials', img1: 'https://i.imgur.com/iXR26KG.png', img2: 'https://i.imgur.com/Cb0SYDW.png', desc: 'Controlled power in the bottom half of the rep. This is for overload, not full range.' },
                         { id: 'ex-sdlr', title: 'Seated Dumbbell Lateral Raise', img1: 'https://i.imgur.com/djP7RC8.png', img2: 'https://i.imgur.com/EXZJW3p.png', desc: 'Think \'out,\' not \'up.\' Keep your shoulders down and away from your ears to isolate the side delts.' },
-                        { id: 'ex-cur', title: 'Cable Rope Upright Row', img1: 'https://i.imgur.com/XnRYfNL.png', img2: 'https://i.imgur.com/SQXKozx.png', desc: 'Pull with your elbows high and out. Separate the rope at the top to fully engage the delts.' },
-                        { id: 'ex-dur', title: 'Dumbbell Upright Row', img1: 'https://i.imgur.com/6lXVjdi.jpeg', img2: 'https://i.imgur.com/ET7cYz7.jpeg', desc: 'Lead with your elbows, pulling them high and out. Keep the dumbbells close to your body.' },
-                        { id: 'ex-ezur', title: 'EZ Bar/Barbell Upright Row', img1: 'https://i.imgur.com/8267Dj4.png', img2: 'https://i.imgur.com/yjG79LM.png', desc: 'A wider grip will emphasize the side delts more. Pull towards your lower chest.' }
+                        { id: 'ex-cur', title: 'Cable Rope Upright Row', img1: 'https://i.imgur.com/XnRYfNL.png', img2: 'https://i.imgur.com/SQXKozx.png', desc: 'Pull with your elbows high and out. Separate the rope at the top to fully engage the delts. Start with a low weight you can control to avoid using your traps.' },
+                        { id: 'ex-dur', title: 'Dumbbell Upright Row', img1: 'https://i.imgur.com/6lXVjdi.jpeg', img2: 'https://i.imgur.com/ET7cYz7.jpeg', desc: 'Lead with your elbows, pulling them high and out. Keep the dumbbells close to your body. Start with a low weight you can control to avoid using your traps.' }
                     ]
                 },
                 'rear-delts': {
@@ -195,17 +192,30 @@
                 'full-body': { title: 'Full Body', schedule: [['Mon', 'Full Body + <strong>Shoulder Workout A</strong>'], ['Tue', 'Rest'], ['Wed', 'Full Body'], ['Thu', 'Rest'], ['Fri', 'Full Body + <strong>Shoulder Workout B</strong>'], ['Sat', 'Rest'], ['Sun', 'Rest']] },
                 'upper-lower': { title: 'Upper/Lower', schedule: [['Mon', 'Upper Body + <strong>Shoulder Workout A</strong>'], ['Tue', 'Lower Body'], ['Wed', 'Rest'], ['Thu', 'Upper Body + <strong>Shoulder Workout B</strong>'], ['Fri', 'Lower Body'], ['Sat', 'Rest'], ['Sun', 'Rest']] }
             },
-            workoutStructure: {
+            workoutStructureHypertrophy: { // Weeks 1-3
                 workoutA: [
-                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-bsmp', tertiary: 'ex-msp' }, target: '7-12 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-msp', tertiary: 'ex-bsmp' }, target: '7-12 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-clr', alternate: 'ex-lidlr' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-dlrp' }, target: 'Aim for 30 Reps', intensity: 'Total Failure', rest: 'Up to 5 mins Rest', sets: 2 },
                     { exercise: { primary: 'ex-scrd', alternate: 'ex-rdpd', tertiary: 'ex-borddf' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '90s Rest', sets: 1 }
                 ],
                 workoutB: [
-                    { exercise: { primary: 'ex-cur', alternate: 'ex-dur' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-cur', alternate: 'ex-dur' }, target: '8-12 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-sdlr', alternate: 'ex-lidlr' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-cfpr', alternate: 'ex-scrf', tertiary: 'ex-borddf' }, target: '10-20 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 }
+                ]
+            },
+            workoutStructureStrength: { // Weeks 4-6
+                workoutA: [
+                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-msp', tertiary: 'ex-bsmp' }, target: '5-10 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-clr', alternate: 'ex-lidlr' }, target: '5-10 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-dlrp' }, target: 'Aim for 20 Reps', intensity: 'Total Failure', rest: 'Up to 5 mins Rest', sets: 2 },
+                    { exercise: { primary: 'ex-scrd', alternate: 'ex-rdpd', tertiary: 'ex-borddf' }, target: '5-10 Reps', intensity: 'Total Failure', rest: '90s Rest', sets: 1 }
+                ],
+                workoutB: [
+                    { exercise: { primary: 'ex-cur', alternate: 'ex-dur' }, target: '6-10 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-sdlr', alternate: 'ex-lidlr' }, target: '5-10 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-cfpr', alternate: 'ex-scrf', tertiary: 'ex-borddf' }, target: '8-15 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 }
                 ]
             }
         };
@@ -231,9 +241,14 @@
         // --- STATE MANAGEMENT & NOTIFICATIONS ---
         let state = {};
 
-        const showNotification = (message) => {
+        const showNotification = (message, isDismissible = true) => {
             notificationMessage.textContent = message;
             notificationBanner.classList.remove('hidden');
+            if (isDismissible) {
+                notificationClose.classList.remove('hidden');
+            } else {
+                notificationClose.classList.add('hidden');
+            }
         };
         
         notificationClose.addEventListener('click', () => notificationBanner.classList.add('hidden'));
@@ -369,15 +384,15 @@
         
         const renderWorkoutPage = (workoutId, workoutData) => {
             const weeklyFocuses = [
-                "<strong>Week 1: The Foundation.</strong> Concentrate on perfect form and controlling every inch of the movement.",
-                "<strong>Week 2: The Signal.</strong> Squeeze the target muscle hard on every rep. Feel the mind-muscle connection.",
-                "<strong>Week 3: The Load.</strong> It's time to challenge yourself. Push for a small weight increase on at least one exercise.",
-                "<strong>Week 4: The Effort.</strong> The goal this week is intensity. Safely push one set on each exercise close to failure.",
-                "<strong>Week 5: The Details.</strong> Own the negative. Control the lowering portion of each lift for a slow, 2-second count.",
-                "<strong>Week 6: The Final Test.</strong> This is it. Review your numbers from the past 5 weeks and beat every record you can."
+                "<strong>Week 1: Hypertrophy Focus.</strong> Concentrate on perfect form and controlling every inch of the movement.",
+                "<strong>Week 2: Hypertrophy Focus.</strong> Squeeze the target muscle hard on every rep. Feel the mind-muscle connection.",
+                "<strong>Week 3: Hypertrophy Focus.</strong> The goal this week is intensity. Safely push one set on each exercise close to failure.",
+                "<strong>Week 4: Strength Focus.</strong> Time to get strong. With lower reps, focus on increasing the weight.",
+                "<strong>Week 5: Strength Focus.</strong> Own the negative. Control the lowering portion of each heavy lift for a slow, 2-second count.",
+                "<strong>Week 6: Strength Focus.</strong> This is it. Review your numbers and beat every record you can with heavy, controlled reps."
             ];
             const renderWorkoutTable = (workoutType, weekNum) => {
-                const structure = APP_DATA.workoutStructure[workoutType];
+                const structure = weekNum <= 3 ? APP_DATA.workoutStructureHypertrophy[workoutType] : APP_DATA.workoutStructureStrength[workoutType];
                 return `
                     <h4 class="font-bold text-lg text-slate-800 mt-6 mb-3">${workoutType === 'workoutA' ? 'Workout A' : 'Workout B'}</h4>
                     <div class="overflow-x-auto bg-white border border-slate-200 rounded-lg">
@@ -618,6 +633,16 @@
             });
         };
 
+        // --- PRIVATE MODE DETECTION ---
+        const checkPrivateMode = () => {
+            try {
+                localStorage.setItem('__test_private_mode__', '1');
+                localStorage.removeItem('__test_private_mode__');
+                return false;
+            } catch (e) {
+                return true;
+            }
+        };
 
         // --- INITIALIZATION ---
         loadState();
@@ -625,6 +650,10 @@
         window.addEventListener('hashchange', router);
         router(); 
         setupA2HSBanner();
+
+        if (checkPrivateMode()) {
+            showNotification("Warning: You are in Private Mode. Progress will NOT be saved when you close the tab.", false);
+        }
 
         // General Listeners
         navPanel.addEventListener('click', handleNavigation);
