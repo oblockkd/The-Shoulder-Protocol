@@ -6,10 +6,8 @@
     <meta name="description" content="The Shoulder Protocol: A complete 6-week program with a built-in tracker and exercise vault for building 3D delts. Your offline-first, standalone guide to guaranteed shoulder growth.">
     <title>The Shoulder Protocol - Refactored</title>
     
-    <!-- Tailwind CSS for rapid, utility-first styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter for headings, Roboto for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -63,16 +61,13 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- Error/Notification Banner -->
     <div id="notification-banner" class="hidden sticky top-0 z-50 bg-red-100 border-b border-red-200 text-red-800 px-4 py-2 text-center text-sm">
         <span id="notification-message"></span>
         <button id="notification-close" aria-label="Dismiss notification" class="ml-4 font-bold">&times;</button>
     </div>
 
-    <!-- Main Application Layout: Two-Panel (Sidebar + Main Content) -->
     <div class="flex h-screen bg-gray-50">
         
-        <!-- === LEFT PANEL: NAVIGATION === -->
         <aside id="nav-panel" class="w-64 bg-white border-r border-slate-200 flex-col flex-shrink-0 h-full p-4 hidden md:flex">
             <div class="flex items-center gap-3 mb-6 px-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3"/><path d="M10.07 17.94c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3"/><path d="m14.81 5.49 2.44-2.44"/><path d="m16.22 4.08 3.52-3.52"/></svg>
@@ -81,11 +76,9 @@
             <nav id="main-nav" class="flex flex-col gap-1 overflow-y-auto flex-grow"></nav>
         </aside>
 
-        <!-- === RIGHT PANEL: MAIN CONTENT === -->
         <main id="content-panel" class="flex-1 flex flex-col h-full overflow-y-auto">
-            <!-- Mobile Header -->
             <div class="md:hidden flex items-center justify-between p-4 bg-white border-b border-slate-200 sticky top-0 z-10">
-                 <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3"/><path d="M10.07 17.94c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3"/><path d="m14.81 5.49 2.44-2.44"/><path d="m16.22 4.08 3.52-3.52"/></svg>
                     <h1 class="text-lg font-bold text-slate-900">The Protocol</h1>
                 </div>
@@ -93,37 +86,31 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                 </button>
             </div>
-             <!-- Mobile Menu (Drawer) -->
-            <div id="mobile-menu-drawer" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
+             <div id="mobile-menu-drawer" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
                 <div id="mobile-nav-panel" class="w-64 bg-white h-full p-4">
                      <div class="flex items-center justify-between mb-6 px-2">
-                        <h1 class="text-xl font-bold text-slate-900">Menu</h1>
-                        <button id="close-mobile-menu-btn" aria-label="Close navigation menu" class="p-2 rounded-lg hover:bg-slate-100">
+                         <h1 class="text-xl font-bold text-slate-900">Menu</h1>
+                         <button id="close-mobile-menu-btn" aria-label="Close navigation menu" class="p-2 rounded-lg hover:bg-slate-100">
                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                        </button>
-                    </div>
+                         </button>
+                     </div>
                     <nav id="mobile-main-nav" class="flex flex-col gap-1"></nav>
                 </div>
             </div>
             
-            <!-- Content Area: This is where pages are rendered -->
             <div id="content-area" class="p-4 sm:p-6 lg:p-8 flex-grow">
-                <!-- Dynamic content will be injected here -->
-            </div>
+                </div>
         </main>
     </div>
     
-    <!-- === MODAL DIALOG for Exercise Details === -->
     <dialog id="exercise-modal" class="p-0 bg-white rounded-xl shadow-2xl w-11/12 max-w-3xl border-none backdrop:backdrop-blur-sm" aria-labelledby="modal-title" aria-modal="true">
         <div id="modal-content-area" class="p-6 sm:p-8">
-            <!-- Modal content will be injected here -->
-        </div>
+            </div>
         <button id="modal-close-btn" aria-label="Close exercise details" class="absolute top-2 right-2 p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-full transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
     </dialog>
 
-    <!-- === ADD TO HOME SCREEN BANNER === -->
     <div id="a2hs-banner" class="hidden fixed bottom-4 left-4 right-4 md:left-auto md:max-w-md bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 transition-transform duration-300 transform translate-y-20">
         <div class="flex items-start">
             <div class="flex-grow">
@@ -160,7 +147,7 @@
                     exercises: [
                         { id: 'ex-sdsp', title: 'Seated Dumbbell Shoulder Press', img1: 'https://i.imgur.com/vZFMqwM.png', img2: 'https://i.imgur.com/ZqWeO0S.png', desc: 'Keep forearms vertical. Don\'t let elbows flare too wide.' },
                         { id: 'ex-bsmp', title: 'Barbell Standing Military Press', img1: 'https://i.imgur.com/GpPWMZa.png', img2: 'https://i.imgur.com/uq8fAfc.png', desc: 'Keep core braced. Move your head around the bar, not the bar around your head.' },
-                        { id: 'ex-smsp', title: 'Smith Machine Seated Shoulder Press', img1: 'https://i.imgur.com/qeP14ky.png', img2: 'https://i.imgur.com/kLg7Wxe.png', desc: 'Set the bench upright. The bar path is fixed, allowing for maximum focus on the front delts.' },
+                        { id: 'ex-sbsp', title: 'Seated Barbell Shoulder Press', img1: 'https://i.imgur.com/qeP14ky.png', img2: 'https://i.imgur.com/kLg7Wxe.png', desc: 'Set the bench upright. Can be done on a Smith machine for more stability and focus on the front delts.' },
                         { id: 'ex-msp', title: 'Machine Shoulder Press', img1: 'https://i.imgur.com/v5P82TK.png', img2: 'https://i.imgur.com/fLepy6z.png', desc: 'Adjust the seat so the handles are at shoulder height. Press up without locking out your elbows to maintain tension.' }
                     ]
                 },
@@ -194,7 +181,7 @@
             },
             workoutStructureHypertrophy: { // Weeks 1-3
                 workoutA: [
-                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-msp', tertiary: 'ex-bsmp' }, target: '7-12 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-sbsp', tertiary: 'ex-msp' }, target: '7-12 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-clr', alternate: 'ex-lidlr' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-dlrp' }, target: 'Aim for 30 Reps', intensity: 'Total Failure', rest: 'Up to 5 mins Rest', sets: 2 },
                     { exercise: { primary: 'ex-scrd', alternate: 'ex-rdpd', tertiary: 'ex-borddf' }, target: '7-15 Reps', intensity: 'Total Failure', rest: '90s Rest', sets: 1 }
@@ -207,7 +194,7 @@
             },
             workoutStructureStrength: { // Weeks 4-6
                 workoutA: [
-                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-msp', tertiary: 'ex-bsmp' }, target: '5-10 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
+                    { exercise: { primary: 'ex-sdsp', alternate: 'ex-sbsp', tertiary: 'ex-msp' }, target: '5-10 Reps', intensity: 'Stop 1 rep before failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-clr', alternate: 'ex-lidlr' }, target: '5-10 Reps', intensity: 'Total Failure', rest: '120s Rest', sets: 2 },
                     { exercise: { primary: 'ex-dlrp' }, target: 'Aim for 20 Reps', intensity: 'Total Failure', rest: 'Up to 5 mins Rest', sets: 2 },
                     { exercise: { primary: 'ex-scrd', alternate: 'ex-rdpd', tertiary: 'ex-borddf' }, target: '5-10 Reps', intensity: 'Total Failure', rest: '90s Rest', sets: 1 }
@@ -314,35 +301,46 @@
             let html = '';
             if (targetId === 'dashboard' || !targetId) {
                 html = `
-                    <div class="max-w-4xl mx-auto">
-                        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 text-center">The Shoulder Protocol</h1>
-                        <p class="text-center text-slate-500 mt-2 text-lg">Cap Your Shoulders in 6 Weeks Without a PT or Expensive Supplements.</p>
-                        <div class="mt-8 p-4 bg-amber-100 border border-amber-200 text-amber-900 rounded-lg text-center font-semibold">
-                            🎯 Start here → Pick your split and begin Week 1. Progress saves automatically & works offline.
+                    <div>
+                        <div class="max-w-4xl mx-auto">
+                            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 text-center">The Shoulder Protocol</h1>
+                            <p class="text-center text-slate-500 mt-2 text-lg">Cap Your Shoulders in 6 Weeks Without a PT or Expensive Supplements.</p>
+                            <div class="mt-8 p-4 bg-amber-100 border border-amber-200 text-amber-900 rounded-lg text-center font-semibold">
+                                🎯 Start here → Pick your split and begin Week 1. Progress saves automatically & works offline.
+                            </div>
+                            <h2 class="font-bold text-2xl text-slate-800 mt-12 mb-4">Choose Your Split</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                ${Object.entries(APP_DATA.workouts).map(([id, { title }]) => `
+                                    <a href="#workout-${id}" data-target="workout-${id}" class="nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all text-center">
+                                        <h3 class="font-bold text-slate-900">${title}</h3>
+                                    </a>
+                                `).join('')}
+                            </div>
+                            <h2 class="font-bold text-2xl text-slate-800 mt-12 mb-4">Resources</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                 <a href="#solutions" data-target="solutions" class="nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all">
+                                     <h3 class="font-bold text-slate-900">Solution Modules</h3>
+                                     <p class="text-sm text-slate-500 mt-1">Key solutions to accelerate your growth.</p>
+                                 </a>
+                                 <a href="#vault" data-target="vault" class="nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all">
+                                     <h3 class="font-bold text-slate-900">Exercise Vault</h3>
+                                     <p class="text-sm text-slate-500 mt-1">A library of approved movements & techniques.</p>
+                                 </a>
+                                <a href="#intro-video" data-target="intro-video" class="sm:col-span-2 nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all text-center">
+                                     <h3 class="font-bold text-slate-900">Watch The Intro</h3>
+                                     <p class="text-sm text-slate-500 mt-1">A quick overview of the program's philosophy.</p>
+                                 </a>
+                            </div>
                         </div>
-                        <h2 class="font-bold text-2xl text-slate-800 mt-12 mb-4">Choose Your Split</h2>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            ${Object.entries(APP_DATA.workouts).map(([id, { title }]) => `
-                                <a href="#workout-${id}" data-target="workout-${id}" class="nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all text-center">
-                                    <h3 class="font-bold text-slate-900">${title}</h3>
-                                </a>
-                            `).join('')}
-                        </div>
-                        <h2 class="font-bold text-2xl text-slate-800 mt-12 mb-4">Resources</h2>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                             <a href="#solutions" data-target="solutions" class="nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all">
-                                <h3 class="font-bold text-slate-900">Solution Modules</h3>
-                                <p class="text-sm text-slate-500 mt-1">Key solutions to accelerate your growth.</p>
-                            </a>
-                             <a href="#vault" data-target="vault" class="nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all">
-                                <h3 class="font-bold text-slate-900">Exercise Vault</h3>
-                                <p class="text-sm text-slate-500 mt-1">A library of approved movements & techniques.</p>
-                            </a>
-                            <a href="#intro-video" data-target="intro-video" class="sm:col-span-2 nav-link-card block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-amber-400 hover:-translate-y-1 transition-all text-center">
-                                <h3 class="font-bold text-slate-900">Watch The Intro</h3>
-                                <p class="text-sm text-slate-500 mt-1">A quick overview of the program's philosophy.</p>
-                            </a>
-                        </div>
+                        <footer class="max-w-4xl mx-auto mt-16 pt-8 border-t border-slate-200 text-slate-500 text-xs">
+                            <h3 class="font-semibold text-slate-600 text-sm mb-2">Medical Disclaimer</h3>
+                            <div class="space-y-2">
+                                <p>The information provided in The Shoulder Protocol is for general informational and educational purposes only. It is not intended as personal medical advice, diagnosis, or treatment, nor is it a substitute for professional healthcare guidance. You should always consult a qualified medical or health professional before starting this or any exercise program, particularly if you have an existing injury, condition, or concern.</p>
+                                <p>Participation in any exercise program carries inherent risks, including the risk of injury, aggravation of a pre-existing condition, or other adverse effects. By engaging in this program, you acknowledge and voluntarily accept all such risks. You agree that you are solely responsible for your own health and safety, and you release, indemnify, and hold harmless the creator(s) of The Shoulder Protocol from any liability, claim, or cause of action, to the fullest extent permitted by Australian law.</p>
+                                <p>Results from this program are not guaranteed and will vary depending on individual factors, including your personal health status, effort, and adherence.</p>
+                                <p>This disclaimer is governed by the laws of Australia. If any provision of this disclaimer is found to be invalid under applicable law, the remaining provisions shall continue in full force and effect.</p>
+                            </div>
+                        </footer>
                     </div>
                 `;
             } else if (targetId.startsWith('workout-')) {
@@ -555,9 +553,9 @@
                 saveState();
             } else if (e.target.matches('input[type="radio"][data-ex-choice]')) {
                  if (e.target.checked) {
-                    state[e.target.name] = e.target.dataset.exChoice;
-                    saveState();
-                }
+                     state[e.target.name] = e.target.dataset.exChoice;
+                     saveState();
+                 }
             }
         });
 
